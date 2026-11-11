@@ -8,6 +8,7 @@ Cloud Computing 2026 · Universidad Galileo
 - **Repositorio:** https://github.com/Zylohw/Proyecto-Final-Cloud-Computing
 - **Despliegue:** https://d1eik3xsy2bfk4.cloudfront.net
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
+- **Video:** [Video de demostración](video.mp4)
 
 ![Arquitectura de LEAF](img/diagrama-arquitectura.png)
 

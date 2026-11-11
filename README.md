@@ -33,7 +33,7 @@ Una app de Android y un portal web que acompañan el autoexamen de mama. La API 
 ### [LEAF](proyectos/leaf/README.md)
 **AWS.** Pablo Daniel Vásquez Aldana.
 Una aplicación para registrar las lecturas de los contadores de agua de un condominio y calcular el consumo de cada casa. Corre en EC2 detrás de un balanceador y CloudFront, con RDS y S3, roles de IAM con permisos mínimos y alarmas que avisan por correo.
-[Ver la app desplegada](https://d1eik3xsy2bfk4.cloudfront.net) · [Repositorio](https://github.com/Zylohw/Proyecto-Final-Cloud-Computing) · [Documentación](proyectos/leaf/README.md)
+[Ver la app desplegada](https://d1eik3xsy2bfk4.cloudfront.net) · [Repositorio](https://github.com/Zylohw/Proyecto-Final-Cloud-Computing) · [Documentación](proyectos/leaf/README.md) · [Video](proyectos/leaf/video.mp4)
 
 ### [Semilla — Asistente de gestión para pequeños negocios](proyectos/semilla/README.md)
 **Azure.** Lizardo Enmanuel González Méndez y Jessell Andrea Contreras Escobar.
