@@ -8,7 +8,7 @@ Grupo 10 · Cloud Computing 2026 · Universidad Galileo
 - **Repositorio:** https://github.com/Zylohw/Proyecto-Final-Cloud-Computing
 - **Despliegue:** https://d1eik3xsy2bfk4.cloudfront.net
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
-- **Video:** [Video de demostración](video.mp4)
+- **Video:** el video del equipo está en YouTube como privado (https://www.youtube.com/watch?v=jv2t3hB3gt4), por eso no se incluye aquí
 
 ---
 

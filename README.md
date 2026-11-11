@@ -66,7 +66,7 @@ Guíame es un ecosistema de salud digital que acompaña el autoexamen de mama. L
 ### 5. [LEAF](proyectos/leaf/README.md)
 **Grupo 10 · AWS.** Pablo Daniel Vásquez Aldana.
 LEAF registra y consulta las lecturas de los contadores de agua de un condominio y calcula el consumo de cada vivienda. Corre en EC2 detrás de un Application Load Balancer y CloudFront, con RDS PostgreSQL y S3. Tiene roles de IAM con mínimo privilegio y alarmas de CloudWatch que avisan por SNS.
-[Repositorio](https://github.com/Zylohw/Proyecto-Final-Cloud-Computing) · [Documentación](proyectos/leaf/README.md) · [Video](proyectos/leaf/video.mp4)
+[Repositorio](https://github.com/Zylohw/Proyecto-Final-Cloud-Computing) · [Documentación](proyectos/leaf/README.md)
 
 ### 6. [Semilla — asistente de gestión para pequeños negocios](proyectos/semilla/README.md)
 **Grupo 7 · Azure.** Lizardo Enmanuel González Méndez y Jessell Andrea Contreras Escobar.
