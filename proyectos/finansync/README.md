@@ -1,6 +1,6 @@
 # FinanSync
 
-Grupo 2 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Roberto Javier Molina López, Luis Gabriel Córdova Archila
 - **Proveedor cloud:** Google Cloud Platform (GCP)
@@ -9,6 +9,8 @@ Grupo 2 · Cloud Computing 2026 · Universidad Galileo
 - **Despliegue:** https://finansync.me
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de FinanSync](img/diagrama-arquitectura.png)
 
 ---
 

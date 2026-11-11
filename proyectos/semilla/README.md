@@ -1,6 +1,6 @@
 # Semilla — asistente de gestión para pequeños negocios
 
-Grupo 7 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Lizardo Enmanuel González Méndez, Jessell Andrea Contreras Escobar
 - **Proveedor cloud:** Microsoft Azure
@@ -9,6 +9,8 @@ Grupo 7 · Cloud Computing 2026 · Universidad Galileo
 - **Despliegue:** https://app-asistente-negocios-dev.redplant-0de50877.northcentralus.azurecontainerapps.io
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de Semilla](img/diagrama-arquitectura.png)
 
 ---
 

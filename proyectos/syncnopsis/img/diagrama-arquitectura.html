@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncNopsis · Arquitectura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #eb6c36;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1200px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Arquitectura en AWS + API de Gemini</p>
+    <h1>SyncNopsis</h1>
+
+    <svg viewBox="0 72 1200 548" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="syncnopsis-arq-title syncnopsis-arq-desc">
+      <title id="syncnopsis-arq-title">SyncNopsis: arquitectura</title>
+      <desc id="syncnopsis-arq-desc">Arquitectura de SyncNopsis: el usuario entra por CloudFront a una instancia EC2 con Next.js en Docker, que usa RDS PostgreSQL con pgvector, S3 y la API de Gemini; GitHub Actions construye con CodeBuild y ECR y despliega con Systems Manager.</desc>
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+      </defs>
+      <rect x="0" y="72" width="1200" height="548" fill="#f5f5f5"/>
+<!-- Zonas -->
+<rect x="240" y="96" width="760" height="424" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.16)" stroke-width="0.8"/>
+<rect x="252" y="100" width="100" height="12" rx="2" fill="#f5f5f5"/>
+<text x="302.0" y="109" fill="rgba(45,49,66,0.55)" font-size="7.5" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">AWS · US-EAST-2</text>
+<!-- Flechas (antes que los nodos) -->
+<path d="M 200,304 H 272" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<path d="M 432,304 H 520" fill="none" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+<path d="M 200,152 H 520" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 200,184 H 484 Q 492,184 492,192 V 264 Q 492,272 500,272 H 520" fill="none" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<path d="M 600,200 V 264" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 672,264 V 240 Q 672,232 680,232 H 1024" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<path d="M 700,304 H 776" fill="none" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<path d="M 592,344 V 392" fill="none" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+<path d="M 684,344 V 416 Q 684,424 692,424 H 776" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 352,328 V 472 Q 352,480 360,480 H 856 Q 864,480 864,472 V 456" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<!-- Etiquetas de flechas -->
+<rect x="216" y="284" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="236" y="293" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">HTTPS</text>
+<rect x="446" y="284" width="60" height="12" rx="2" fill="#f5f5f5"/>
+<text x="476" y="293" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">PUERTO 80</text>
+<rect x="280" y="132" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="300" y="141" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">BUILD</text>
+<rect x="256" y="164" width="88" height="12" rx="2" fill="#f5f5f5"/>
+<text x="300" y="173" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">DESPLIEGUE SSM</text>
+<rect x="520" y="226" width="72" height="12" rx="2" fill="#f5f5f5"/>
+<text x="556" y="235" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">PULL IMAGEN</text>
+<rect x="866" y="212" width="68" height="12" rx="2" fill="#f5f5f5"/>
+<text x="900" y="221" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">API GEMINI</text>
+<rect x="720" y="284" width="36" height="12" rx="2" fill="#f5f5f5"/>
+<text x="738" y="293" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">LOGS</text>
+<rect x="600" y="362" width="60" height="12" rx="2" fill="#f5f5f5"/>
+<text x="630" y="371" fill="#eb6c36" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">SQL · TLS</text>
+<rect x="710" y="404" width="52" height="12" rx="2" fill="#f5f5f5"/>
+<text x="736" y="413" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">ROL IAM</text>
+<rect x="556" y="460" width="88" height="12" rx="2" fill="#f5f5f5"/>
+<text x="600" y="469" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">OAC · IMÁGENES</text>
+<!-- Nodos -->
+<rect x="40" y="120" width="160" height="96" rx="6" fill="#f5f5f5"/>
+<rect x="40" y="120" width="160" height="96" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+<rect x="48" y="126" width="40" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.22)" stroke-width="0.8"/>
+<text x="68.0" y="135" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">CI/CD</text>
+<text x="120.0" y="160" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">GitHub Actions</text>
+<text x="120.0" y="175" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">push a master</text>
+<rect x="40" y="272" width="160" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="40" y="272" width="160" height="64" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<rect x="48" y="278" width="28" height="12" rx="2" fill="transparent" stroke="rgba(122,131,153,0.40)" stroke-width="0.8"/>
+<text x="62.0" y="287" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">USR</text>
+<text x="120.0" y="308" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Usuario</text>
+<text x="120.0" y="323" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">navegador</text>
+<rect x="272" y="264" width="160" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="272" y="264" width="160" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="280" y="270" width="28" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="294.0" y="279" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">CDN</text>
+<text x="352.0" y="300" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">CloudFront</text>
+<text x="352.0" y="315" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">app · imágenes firmadas</text>
+<rect x="520" y="136" width="180" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="520" y="136" width="180" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="528" y="142" width="40" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="548.0" y="151" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">CI/CD</text>
+<text x="610.0" y="172" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">CodeBuild + ECR</text>
+<text x="610.0" y="187" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">imagen Docker</text>
+<rect x="520" y="264" width="180" height="80" rx="6" fill="#f5f5f5"/>
+<rect x="520" y="264" width="180" height="80" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<rect x="528" y="270" width="28" height="12" rx="2" fill="transparent" stroke="rgba(235,108,54,0.50)" stroke-width="0.8"/>
+<text x="542.0" y="279" fill="#eb6c36" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">EC2</text>
+<text x="610.0" y="304" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Amazon EC2</text>
+<text x="610.0" y="319" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">t3.micro · Docker · Next.js</text>
+<text x="610.0" y="332" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">rol IAM · Secrets Manager</text>
+<rect x="520" y="392" width="144" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="520" y="392" width="144" height="64" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="528" y="398" width="28" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="542.0" y="407" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">DB</text>
+<text x="592.0" y="428" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">RDS PostgreSQL</text>
+<text x="592.0" y="443" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">pgvector · privada</text>
+<rect x="776" y="272" width="180" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="776" y="272" width="180" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="784" y="278" width="28" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="798.0" y="287" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">MON</text>
+<text x="866.0" y="308" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">CloudWatch + SNS</text>
+<text x="866.0" y="323" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">logs · 5 alarmas · correo</text>
+<rect x="776" y="392" width="180" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="776" y="392" width="180" height="64" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="784" y="398" width="28" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="798.0" y="407" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">S3</text>
+<text x="866.0" y="428" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Amazon S3</text>
+<text x="866.0" y="443" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">capturas · URL firmadas</text>
+<rect x="1024" y="200" width="144" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="1024" y="200" width="144" height="64" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+<rect x="1032" y="206" width="28" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.22)" stroke-width="0.8"/>
+<text x="1046.0" y="215" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">IA</text>
+<text x="1096.0" y="236" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Google Gemini</text>
+<text x="1096.0" y="251" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">visión · embeddings</text>
+<!-- Leyenda -->
+<line x1="40" y1="548" x2="1160" y2="548" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+<text x="40" y="564" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEYENDA</text>
+<rect x="40" y="580" width="14" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<text x="60" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Núcleo del sistema</text>
+<rect x="159" y="580" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="179" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Servicio</text>
+<rect x="236" y="580" width="14" height="10" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<text x="256" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Datos / almacenamiento</text>
+<rect x="372" y="580" width="14" height="10" rx="2" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+<text x="392" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Externo / otra nube</text>
+<rect x="495" y="580" width="14" height="10" rx="2" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<text x="515" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Usuario</text>
+<line x1="568" y1="585" x2="596" y2="585" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<text x="604" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Petición HTTPS</text>
+<line x1="686" y1="585" x2="714" y2="585" stroke="#eb6c36" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+<text x="722" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Flujo principal</text>
+<line x1="809" y1="585" x2="837" y2="585" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="845" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Llamada interna</text>
+<line x1="932" y1="585" x2="960" y2="585" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<text x="968" y="588" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Asíncrono / control</text>
+    </svg>
+  </div>
+</body>
+</html>

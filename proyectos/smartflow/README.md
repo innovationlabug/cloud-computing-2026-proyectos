@@ -1,6 +1,6 @@
 # SmartFlow AI
 
-Grupo 5 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Andrea Sofía Dávila Equité, Wilder Javier Cardoza de la Cruz
 - **Proveedor cloud:** Google Cloud
@@ -9,6 +9,8 @@ Grupo 5 · Cloud Computing 2026 · Universidad Galileo
 - **Despliegue:** https://smartflow-frontend-1020540188448.us-central1.run.app
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf) (presentación del proyecto)
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de SmartFlow AI](img/diagrama-arquitectura.png)
 
 ---
 

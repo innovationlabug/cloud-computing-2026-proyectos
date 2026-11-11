@@ -1,6 +1,6 @@
 # LEAF
 
-Grupo 10 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Pablo Daniel Vásquez Aldana
 - **Proveedor cloud:** Amazon Web Services (AWS), región us-east-2 (Ohio)
@@ -8,7 +8,8 @@ Grupo 10 · Cloud Computing 2026 · Universidad Galileo
 - **Repositorio:** https://github.com/Zylohw/Proyecto-Final-Cloud-Computing
 - **Despliegue:** https://d1eik3xsy2bfk4.cloudfront.net
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
-- **Video:** el video del equipo está en YouTube como privado (https://www.youtube.com/watch?v=jv2t3hB3gt4), por eso no se incluye aquí
+
+![Arquitectura de LEAF](img/diagrama-arquitectura.png)
 
 ---
 

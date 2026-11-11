@@ -1,6 +1,6 @@
 # Guíame — Ecosistema de salud digital para el autoexamen de mama
 
-Grupo 4 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Molly Toledo Vega, María Teresa Rivera López
 - **Proveedor cloud:** Google Cloud Platform (GCP)
@@ -9,6 +9,8 @@ Grupo 4 · Cloud Computing 2026 · Universidad Galileo
 - **Despliegue:** https://guiame-api-252741632220.us-east1.run.app (comprobar con `/health` y `/health/db`)
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de Guíame](img/diagrama-arquitectura.png)
 
 ---
 

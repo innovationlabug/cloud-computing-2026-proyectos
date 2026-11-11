@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guíame · Arquitectura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #eb6c36;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1144px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Arquitectura en Google Cloud</p>
+    <h1>Guíame</h1>
+
+    <svg viewBox="0 0 1144 572" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="guiame-arq-title guiame-arq-desc">
+  <title id="guiame-arq-title">Guíame</title>
+  <desc id="guiame-arq-desc">Arquitectura de Guíame: la app Android llama directo a la API en Cloud Run y el portal web entra por Cloud Load Balancing; la API usa Cloud SQL, Cloud Storage, Vertex AI y Secret Manager, y se despliega con GitHub y Cloud Build.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+    <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f5f5f5"/>
+  <!-- Zonas -->
+<rect x="240" y="56" width="864" height="416" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8" stroke-dasharray="4,4"/>
+<rect x="252" y="60" width="83" height="12" rx="2" fill="#f5f5f5"/>
+<text x="293.5" y="69" fill="rgba(45,49,66,0.55)" font-size="7.5" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">GOOGLE CLOUD</text>
+  <!-- Conectores (antes que los nodos) -->
+<path d="M 220,136 L 464,136 Q 472,136 472,144 L 472,244 Q 472,252 480,252 L 536,252" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<path d="M 220,392 L 272,392" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<path d="M 432,392 L 496,392 Q 504,392 504,384 L 504,300 Q 504,292 512,292 L 536,292" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 636,160 L 636,232" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 636,360 L 636,312" fill="none" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<path d="M 736,252 L 752,252 Q 760,252 760,244 L 760,144 Q 760,136 768,136 L 864,136" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 736,272 L 864,272" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 736,292 L 832,292 Q 840,292 840,300 L 840,384 Q 840,392 848,392 L 864,392" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <!-- Etiquetas de conectores -->
+<rect x="313.0" y="118" width="66" height="12" rx="2" fill="#f5f5f5"/>
+<text x="346.0" y="127" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">HTTPS + JWT</text>
+<rect x="231.5" y="374" width="29" height="12" rx="2" fill="#f5f5f5"/>
+<text x="246.0" y="383" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">HTTP</text>
+<rect x="448.0" y="374" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="468.0" y="383" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">/API/*</text>
+<rect x="644" y="190" width="56" height="12" rx="2" fill="#f5f5f5"/>
+<text x="672.0" y="199" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">DESPLIEGA</text>
+<rect x="644" y="330" width="50" height="12" rx="2" fill="#f5f5f5"/>
+<text x="669.0" y="339" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">SECRETOS</text>
+<rect x="768" y="188" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="788.0" y="197" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">SOCKET</text>
+<rect x="767.0" y="254" width="66" height="12" rx="2" fill="#f5f5f5"/>
+<text x="800.0" y="263" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">URL FIRMADA</text>
+<rect x="848" y="336" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="868.0" y="345" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">GEMINI</text>
+  <!-- Nodos -->
+<rect x="40" y="104" width="180" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="40" y="104" width="180" height="64" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<rect x="48" y="110" width="27" height="12" rx="2" fill="transparent" stroke="rgba(122,131,153,0.40)" stroke-width="0.8"/>
+<text x="61.5" y="119" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">APP</text>
+<text x="130.0" y="142" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">App Android</text>
+<text x="130.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Kotlin · Compose · MVVM</text>
+<rect x="40" y="360" width="180" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="40" y="360" width="180" height="64" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<rect x="48" y="366" width="27" height="12" rx="2" fill="transparent" stroke="rgba(122,131,153,0.40)" stroke-width="0.8"/>
+<text x="61.5" y="375" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">WEB</text>
+<text x="130.0" y="398" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Portal web</text>
+<text x="130.0" y="414" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Next.js + React</text>
+<rect x="272" y="360" width="160" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="272" y="360" width="160" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="280" y="366" width="22" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="291.0" y="375" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">LB</text>
+<text x="352.0" y="398" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud Load Balancing</text>
+<text x="352.0" y="414" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">IP global · guiame-lb</text>
+<rect x="536" y="96" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="536" y="96" width="200" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="544" y="102" width="22" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="555.0" y="111" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">CI</text>
+<text x="636.0" y="134" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">GitHub + Cloud Build</text>
+<text x="636.0" y="150" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">push a main · buildpacks</text>
+<rect x="536" y="232" width="200" height="80" rx="6" fill="#f5f5f5"/>
+<rect x="536" y="232" width="200" height="80" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<rect x="544" y="238" width="27" height="12" rx="2" fill="transparent" stroke="rgba(235,108,54,0.50)" stroke-width="0.8"/>
+<text x="557.5" y="247" fill="#eb6c36" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">RUN</text>
+<text x="636.0" y="274" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud Run · guiame-api</text>
+<text x="636.0" y="290" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Node.js + Express</text>
+<text x="636.0" y="303" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">JWT · 0 a 20 instancias</text>
+<rect x="536" y="360" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="536" y="360" width="200" height="64" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="544" y="366" width="27" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="557.5" y="375" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">SEC</text>
+<text x="636.0" y="398" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Secret Manager</text>
+<text x="636.0" y="414" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">db-password · jwt-secret</text>
+<rect x="864" y="104" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="864" y="104" width="200" height="64" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="872" y="110" width="27" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="885.5" y="119" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">SQL</text>
+<text x="964.0" y="142" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud SQL</text>
+<text x="964.0" y="158" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">PostgreSQL · guiame-sql</text>
+<rect x="864" y="240" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="864" y="240" width="200" height="64" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="872" y="246" width="27" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="885.5" y="255" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">GCS</text>
+<text x="964.0" y="278" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud Storage</text>
+<text x="964.0" y="294" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">guiameapp-media · privado</text>
+<rect x="864" y="360" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="864" y="360" width="200" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="872" y="366" width="22" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="883.0" y="375" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">IA</text>
+<text x="964.0" y="398" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Vertex AI</text>
+<text x="964.0" y="414" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Gemini 2.5 Flash</text>
+  <!-- Notas -->
+<text x="272" y="448" fill="#7a8399" font-size="9.5" font-family="'Geist', sans-serif">Cloud IAM: cuenta guiame-backend, mínimo privilegio</text>
+<text x="272" y="462" fill="#7a8399" font-size="9.5" font-family="'Geist', sans-serif">Monitoring y Logging: uptime /health, alerta 5xx</text>
+  <!-- Leyenda -->
+<line x1="40" y1="508" x2="1104" y2="508" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+<text x="40" y="524" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEYENDA</text>
+<rect x="40" y="534" width="14" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<text x="60" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Núcleo del sistema</text>
+<rect x="181.60000000000002" y="534" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="201.60000000000002" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Servicio</text>
+<rect x="271.20000000000005" y="534" width="14" height="10" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<text x="291.20000000000005" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Datos / almacenamiento</text>
+<rect x="433.6" y="534" width="14" height="10" rx="2" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<text x="453.6" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Usuarios / dispositivos</text>
+<line x1="601.2" y1="539" x2="629.2" y2="539" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<text x="637.2" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Petición HTTP(S) externa</text>
+<line x1="790.0" y1="539" x2="818.0" y2="539" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="826.0" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Llamada interna</text>
+<line x1="932.0" y1="539" x2="960.0" y2="539" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<text x="968.0" y="542" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Asíncrono / de apoyo</text>
+</svg>
+  </div>
+</body>
+</html>

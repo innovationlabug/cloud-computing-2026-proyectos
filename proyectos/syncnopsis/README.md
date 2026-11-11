@@ -1,14 +1,15 @@
 # SyncNopsis
 
-Grupo 8 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Fernando Josué Alegría Velásquez, Anyelo Arthur Sánchez Naranjo
 - **Proveedor cloud:** Amazon Web Services (AWS), región us-east-2; la IA usa la API de Google Gemini
 - **Servicios principales:** Amazon EC2 + Amazon ECR, AWS IAM + Secrets Manager, Amazon S3, Amazon RDS for PostgreSQL + pgvector, Amazon CloudFront, Amazon CloudWatch + SNS, GitHub Actions + AWS CodeBuild + Systems Manager, Google Gemini API
-- **Repositorio:** Repositorio privado
 - **Despliegue:** https://d11s6bjcprs8g7.cloudfront.net
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de SyncNopsis](img/diagrama-arquitectura.png)
 
 ---
 
@@ -21,7 +22,6 @@ Grupo 8 · Cloud Computing 2026 · Universidad Galileo
 | Curso | Cloud Computing 2026 · Universidad Galileo · FISICC |
 | Equipo | Fernando Alegría · Anyelo Sánchez |
 | Proyecto desplegado | https://d11s6bjcprs8g7.cloudfront.net |
-| Repositorio | Privado |
 | Drive con videos/imágenes | https://drive.google.com/drive/folders/19AEpgjOMzTPznUOez0nvhiv1EqO8IHDL?usp=sharing |
 | Proveedor | Amazon Web Services (la IA usa la API de Google Gemini) |
 | Servicios | 8: 7 en AWS (Compute, Security, Storage, Database, Networking, Monitoring y CI/CD) más Gemini (AI) |

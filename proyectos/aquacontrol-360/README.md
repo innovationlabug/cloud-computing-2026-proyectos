@@ -1,14 +1,15 @@
 # AquaControl 360
 
-Grupo 9 (ShirmpProgrammers) · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Edgar Andrés Culajay Hernández, Allan Josué Gómez Pérez
 - **Proveedor cloud:** Google Cloud Platform (GCP)
 - **Servicios principales:** Cloud Run (API y web), Cloud SQL (PostgreSQL 17), Cloud Storage, Pub/Sub (push con OIDC), Vertex AI (Gemini), Secret Manager, Cloud IAM, Cloud Build, Artifact Registry, Cloud Logging y Monitoring
-- **Repositorio:** Repositorio privado
 - **Despliegue:** https://aquacontrol-web-1000315935309.us-central1.run.app (API: https://aquacontrol-api-1000315935309.us-central1.run.app)
 - **Documentación PDF:** [documentacion.pdf](documentacion.pdf)
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de AquaControl 360](img/diagrama-arquitectura.png)
 
 ---
 
@@ -23,7 +24,6 @@ Proyecto de los cursos de **Ingeniería de Software**, **CC6** y **Cloud Computi
 | Sitio web desplegado | https://aquacontrol-web-1000315935309.us-central1.run.app |
 | API REST desplegada | https://aquacontrol-api-1000315935309.us-central1.run.app |
 | Video de demostración | [Video de demostración](video.mp4) |
-| Repositorio | Repositorio privado |
 | Documentación PDF | [documentacion.pdf](documentacion.pdf) |
 
 > Los usuarios de prueba no se publican en este repositorio. Se comparten de forma privada con el catedrático.

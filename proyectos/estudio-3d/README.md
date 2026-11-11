@@ -1,18 +1,17 @@
 # Estudio 3D
 
-Grupo 1 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Geovanni Alejandro Ordoñez Alvarez, Alan Steven Martínez López
 - **Proveedor cloud:** AWS
 - **Servicios principales:** Amazon EC2, Amazon S3, Amazon CloudFront, AWS Lambda (además de Supabase para autenticación y base de datos)
 - **Repositorio:** https://github.com/AlanMartinezzzz/estudio3d-backend
-- **Despliegue:** No se entregó
-- **Documentación PDF:** No se entregó
-- **Video:** No se entregó video
+
+![Arquitectura de Estudio 3D](img/diagrama-arquitectura.png)
 
 ---
 
-> **Nota:** el grupo no entregó documentación ni README. Esta descripción se redactó a partir del código del repositorio (`app.py`, `templates/`, `static/`, `Dockerfile`, `.github/workflows/deploy.yml` y `puente_camara/`) y describe solo lo que ese código hace.
+> Esta descripción se redactó a partir del código del repositorio (`app.py`, `templates/`, `static/`, `Dockerfile`, `.github/workflows/deploy.yml` y `puente_camara/`) y describe solo lo que ese código hace.
 
 ## Qué es
 

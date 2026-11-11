@@ -1,14 +1,15 @@
 # Glacier Quest
 
-Grupo 11 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Pablo David Urbina Alvarez, Angel David Camargo Hernández
 - **Proveedor cloud:** Google Cloud
 - **Servicios principales:** Cloud Run, Cloud Storage, IAM, Secret Manager, Cloud Build, Cloud Logging + Monitoring, Cloud Scheduler (complementados con Firebase Realtime Database y Authentication)
 - **Repositorio:** https://github.com/angelprogt3985/Cloud-Computing-proyecto
 - **Despliegue:** https://glacierquest-demo-636305098699.us-central1.run.app/
-- **Documentación PDF:** No se entregó
 - **Video:** [Video de demostración](video.mp4)
+
+![Arquitectura de Glacier Quest](img/diagrama-arquitectura.png)
 
 ---
 

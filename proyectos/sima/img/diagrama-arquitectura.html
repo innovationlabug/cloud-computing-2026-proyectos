@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMA · Arquitectura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #eb6c36;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 1328px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Arquitectura en Google Cloud</p>
+    <h1>SIMA</h1>
+
+    <svg viewBox="0 0 1328 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sima-arq-title sima-arq-desc">
+  <title id="sima-arq-title">SIMA</title>
+  <desc id="sima-arq-desc">Arquitectura de SIMA en Google Cloud: tres sucursales en Compute Engine dentro de una VPC sincronizan por Pub/Sub con api-central en Cloud Run, que coordina traslados 2PC sobre Cloud SQL; Datastream copia los cambios a BigQuery para Looker Studio.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#eb6c36"/></marker>
+    <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f5f5f5"/>
+  <!-- Zonas -->
+<rect x="232" y="64" width="1056" height="464" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8" stroke-dasharray="4,4"/>
+<rect x="244" y="68" width="162" height="12" rx="2" fill="#f5f5f5"/>
+<text x="325.0" y="77" fill="rgba(45,49,66,0.55)" font-size="7.5" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">GOOGLE CLOUD · US-CENTRAL1</text>
+<rect x="264" y="208" width="248" height="136" rx="8" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.10)" stroke-width="0.8" stroke-dasharray="4,4"/>
+<rect x="276" y="212" width="83" height="12" rx="2" fill="#f5f5f5"/>
+<text x="317.5" y="221" fill="rgba(45,49,66,0.55)" font-size="7.5" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">VPC RED-SIMA</text>
+  <!-- Conectores (antes que los nodos) -->
+<path d="M 200,280 L 288,280" fill="none" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<path d="M 420,240 L 420,152 Q 420,144 428,144 L 568,144" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 668,176 L 668,240" fill="none" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<path d="M 768,280 L 840,280" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 568,268 L 488,268" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 488,296 L 568,296" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 668,400 L 668,320" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 940,320 L 940,400" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 1040,432 L 1096,432" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 1176,464 L 1176,568" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <!-- Etiquetas de conectores -->
+<rect x="211.0" y="262" width="66" height="12" rx="2" fill="#f5f5f5"/>
+<text x="244.0" y="271" fill="#2e5aa8" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">HTTPS · IAP</text>
+<rect x="474.0" y="126" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="494.0" y="135" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">OUTBOX</text>
+<rect x="676" y="202" width="56" height="12" rx="2" fill="#f5f5f5"/>
+<text x="704.0" y="211" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">PUSH OIDC</text>
+<rect x="773.5" y="262" width="61" height="12" rx="2" fill="#f5f5f5"/>
+<text x="804.0" y="271" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">IP PRIVADA</text>
+<rect x="516.0" y="250" width="24" height="12" rx="2" fill="#f5f5f5"/>
+<text x="528.0" y="259" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">2PC</text>
+<rect x="505.5" y="278" width="45" height="12" rx="2" fill="#f5f5f5"/>
+<text x="528.0" y="287" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">RÉPLICA</text>
+<rect x="676" y="354" width="66" height="12" rx="2" fill="#f5f5f5"/>
+<text x="709.0" y="363" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">CADA MINUTO</text>
+<rect x="948" y="354" width="56" height="12" rx="2" fill="#f5f5f5"/>
+<text x="976.0" y="363" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">CDC · WAL</text>
+<rect x="1048.0" y="414" width="40" height="12" rx="2" fill="#f5f5f5"/>
+<text x="1068.0" y="423" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">15 MIN</text>
+<rect x="1184" y="490" width="61" height="12" rx="2" fill="#f5f5f5"/>
+<text x="1214.5" y="499" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">VISTAS V_*</text>
+  <!-- Nodos -->
+<rect x="40" y="248" width="160" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="40" y="248" width="160" height="64" rx="6" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<rect x="48" y="254" width="27" height="12" rx="2" fill="transparent" stroke="rgba(122,131,153,0.40)" stroke-width="0.8"/>
+<text x="61.5" y="263" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">EXT</text>
+<text x="120.0" y="286" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Caja PWA</text>
+<text x="120.0" y="302" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">navegador de la tienda</text>
+<rect x="288" y="240" width="200" height="80" rx="6" fill="#f5f5f5"/>
+<rect x="288" y="240" width="200" height="80" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<rect x="296" y="246" width="22" height="12" rx="2" fill="transparent" stroke="rgba(235,108,54,0.50)" stroke-width="0.8"/>
+<text x="307.0" y="255" fill="#eb6c36" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">VM</text>
+<text x="388.0" y="282" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Sucursales (3 VMs)</text>
+<text x="388.0" y="298" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">Compute Engine · zonas a, b, c</text>
+<text x="388.0" y="311" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">api-sucursal + PostgreSQL 16</text>
+<rect x="568" y="112" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="568" y="112" width="200" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="576" y="118" width="27" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="589.5" y="127" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">MSG</text>
+<text x="668.0" y="150" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Pub/Sub</text>
+<text x="668.0" y="166" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">tema sima-sincronizacion</text>
+<rect x="568" y="240" width="200" height="80" rx="6" fill="#f5f5f5"/>
+<rect x="568" y="240" width="200" height="80" rx="6" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<rect x="576" y="246" width="27" height="12" rx="2" fill="transparent" stroke="rgba(235,108,54,0.50)" stroke-width="0.8"/>
+<text x="589.5" y="255" fill="#eb6c36" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">RUN</text>
+<text x="668.0" y="282" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud Run · api-central</text>
+<text x="668.0" y="298" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">consolidación + coordinador 2PC</text>
+<text x="668.0" y="311" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">privado (OIDC) · salida a la VPC</text>
+<rect x="840" y="240" width="200" height="80" rx="6" fill="#f5f5f5"/>
+<rect x="840" y="240" width="200" height="80" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="848" y="246" width="27" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="861.5" y="255" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">SQL</text>
+<text x="940.0" y="282" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud SQL</text>
+<text x="940.0" y="298" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">PostgreSQL 16 · solo IP privada</text>
+<text x="940.0" y="311" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">bitácora del 2PC</text>
+<rect x="568" y="400" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="568" y="400" width="200" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="576" y="406" width="32" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="592.0" y="415" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">CRON</text>
+<text x="668.0" y="438" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Cloud Scheduler</text>
+<text x="668.0" y="454" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">recuperación del 2PC</text>
+<rect x="840" y="400" width="200" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="840" y="400" width="200" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<rect x="848" y="406" width="27" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.40)" stroke-width="0.8"/>
+<text x="861.5" y="415" fill="#2d3142" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">CDC</text>
+<text x="940.0" y="438" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Datastream</text>
+<text x="940.0" y="454" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">CDC vía VM proxy-datastream</text>
+<rect x="1096" y="400" width="160" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="1096" y="400" width="160" height="64" rx="6" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<rect x="1104" y="406" width="22" height="12" rx="2" fill="transparent" stroke="rgba(79,93,117,0.50)" stroke-width="0.8"/>
+<text x="1115.0" y="415" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">BQ</text>
+<text x="1176.0" y="438" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">BigQuery</text>
+<text x="1176.0" y="454" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">sima_cdc → esquema estrella</text>
+<rect x="1096" y="568" width="160" height="64" rx="6" fill="#f5f5f5"/>
+<rect x="1096" y="568" width="160" height="64" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+<rect x="1104" y="574" width="27" height="12" rx="2" fill="transparent" stroke="rgba(45,49,66,0.22)" stroke-width="0.8"/>
+<text x="1117.5" y="583" fill="#7a8399" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">EXT</text>
+<text x="1176.0" y="606" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Looker Studio</text>
+<text x="1176.0" y="622" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">5 tableros</text>
+  <!-- Notas -->
+<text x="264" y="508" fill="#7a8399" font-size="9.5" font-family="'Geist', sans-serif">Plataforma: Cloud IAM · Secret Manager · Cloud Build + Artifact Registry · Cloud Storage (estado de Terraform) · Cloud Monitoring + Logging · IAP · Cloud NAT · presupuesto</text>
+  <!-- Leyenda -->
+<line x1="40" y1="656" x2="1288" y2="656" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+<text x="40" y="672" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEYENDA</text>
+<rect x="40" y="682" width="14" height="10" rx="2" fill="rgba(235,108,54,0.08)" stroke="#eb6c36" stroke-width="1"/>
+<text x="60" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Núcleo del sistema</text>
+<rect x="181.60000000000002" y="682" width="14" height="10" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="201.60000000000002" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Servicio</text>
+<rect x="271.20000000000005" y="682" width="14" height="10" rx="2" fill="rgba(45,49,66,0.05)" stroke="#4f5d75" stroke-width="1"/>
+<text x="291.20000000000005" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Datos / almacenamiento</text>
+<rect x="433.6" y="682" width="14" height="10" rx="2" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+<text x="453.6" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Servicio externo</text>
+<rect x="564.8" y="682" width="14" height="10" rx="2" fill="rgba(79,93,117,0.10)" stroke="#7a8399" stroke-width="1"/>
+<text x="584.8" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Usuarios / dispositivos</text>
+<line x1="732.4" y1="687" x2="760.4" y2="687" stroke="#2e5aa8" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+<text x="768.4" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Petición HTTP(S) externa</text>
+<line x1="921.2" y1="687" x2="949.2" y2="687" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="957.2" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Llamada interna</text>
+<line x1="1063.2" y1="687" x2="1091.2" y2="687" stroke="#4f5d75" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+<text x="1099.2" y="690" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Asíncrono / de apoyo</text>
+</svg>
+  </div>
+</body>
+</html>

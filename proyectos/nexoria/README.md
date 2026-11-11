@@ -1,14 +1,13 @@
 # Nexoria
 
-Grupo 6 · Cloud Computing 2026 · Universidad Galileo
+Cloud Computing 2026 · Universidad Galileo
 
 - **Integrantes:** Jean Carlo Pacheco Pérez, Rodrigo Armando Nathanael Gálvez Mazariegos
 - **Proveedor cloud:** Google Cloud Platform (con Vertex AI y AWS Rekognition)
 - **Servicios principales:** Cloud Run, Artifact Registry, Cloud Build, Cloud Monitoring, Cloud IAM, Vertex AI / Gemini, AWS Rekognition, Supabase PostgreSQL, Vercel
-- **Repositorio:** Repositorio privado
 - **Despliegue:** backend https://nexoria-backend-670955609593.us-central1.run.app
-- **Documentación PDF:** no se entregó documentación en PDF
-- **Video:** No se entregó video
+
+![Arquitectura de Nexoria](img/diagrama-arquitectura.png)
 
 ---
 
