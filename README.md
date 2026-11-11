@@ -62,8 +62,8 @@ Describes un proceso de tu negocio con tus palabras y Gemini dibuja el diagrama 
 
 ### [Estudio 3D](proyectos/estudio-3d/README.md)
 **AWS.** Geovanni Alejandro Ordoñez Alvarez y Alan Steven Martínez López.
-Una aplicación para un taller de impresión 3D. Cotiza la pieza a partir del archivo .stl, gestiona los pedidos y tiene una cámara en vivo para ver cómo se imprime tu pieza.
-[Repositorio](https://github.com/AlanMartinezzzz/estudio3d-backend) · [Documentación](proyectos/estudio-3d/README.md)
+Una aplicación para un taller de impresión 3D. Cotiza la pieza a partir del archivo .stl, gestiona los pedidos y tiene una cámara en vivo para ver cómo se imprime tu pieza. La app corre en Docker sobre EC2, detrás de CloudFront y un balanceador, y guarda los .stl cifrados en S3. El formulario de contacto lo atiende una Lambda que avisa al negocio por correo con SNS.
+[Ver la app desplegada](https://d3bvd36kte6l5e.cloudfront.net) · [Repositorio](https://github.com/AlanMartinezzzz/estudio3d-backend) · [Documentación](proyectos/estudio-3d/README.md)
 
 ## Sobre este repositorio
 

@@ -195,9 +195,9 @@ const P = [
    app:"https://smartflow-frontend-1020540188448.us-central1.run.app", repo:"https://github.com/Sistemas-UG/Proyecto-IS", video:true},
   {slug:"estudio-3d", name:"Estudio 3D", p:"aws",
    team:["Geovanni Alejandro Ordoñez Alvarez","Alan Steven Martínez López"],
-   summary:"Una aplicación para un taller de impresión 3D. Cotiza la pieza a partir del archivo .stl, gestiona los pedidos y tiene una cámara en vivo para ver cómo se imprime tu pieza.",
-   services:["EC2","S3","CloudFront","Lambda"],
-   repo:"https://github.com/AlanMartinezzzz/estudio3d-backend"}
+   summary:"Una aplicación para un taller de impresión 3D. Cotiza la pieza a partir del archivo .stl, gestiona los pedidos y tiene una cámara en vivo para ver cómo se imprime tu pieza. La app corre en Docker sobre EC2, detrás de CloudFront y un balanceador, y guarda los .stl cifrados en S3. El formulario de contacto lo atiende una Lambda que avisa al negocio por correo con SNS.",
+   services:["EC2","S3","CloudFront","Load Balancer","Lambda","SNS","IAM","CloudWatch"],
+   app:"https://d3bvd36kte6l5e.cloudfront.net", repo:"https://github.com/AlanMartinezzzz/estudio3d-backend", capture:true}
 ];
 
 const ICON = {
