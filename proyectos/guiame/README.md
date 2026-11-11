@@ -12,6 +12,8 @@ Cloud Computing 2026 · Universidad Galileo
 
 ![Arquitectura de Guíame](img/diagrama-arquitectura.png)
 
+![Captura de Guíame](img/captura-app.png)
+
 ---
 
 > Contenido tomado de la documentación cloud del equipo ([documentacion.pdf](documentacion.pdf)).

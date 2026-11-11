@@ -5,11 +5,12 @@ Cloud Computing 2026 · Universidad Galileo
 - **Integrantes:** David Alejandro Ortega Reyes, Dilan Jareth Arreaga Tiu
 - **Proveedor cloud:** Google Cloud Platform (GCP)
 - **Servicios principales:** Compute Engine (3 VMs de sucursal), Cloud Run (`api-central`), Cloud SQL para PostgreSQL, Pub/Sub, Cloud Scheduler, Datastream, BigQuery, Looker Studio, Secret Manager, Cloud Build y Artifact Registry, Cloud Monitoring
-- **Despliegue:** https://api-central-3ajtjckllq-uc.a.run.app (servicio privado: requiere autenticación)
 - **Documentación cloud:** [docs/cloud.md](docs/cloud.md)
 - **Video:** [Video de demostración](video.mp4)
 
 ![Arquitectura de SIMA](img/diagrama-arquitectura.png)
+
+![Captura de SIMA](img/captura-app.png)
 
 ---
 
