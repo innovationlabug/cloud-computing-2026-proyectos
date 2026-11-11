@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1090" viewBox="0 0 1600 1090" font-family="Inter, Helvetica, Arial, sans-serif">
+<defs><marker id="ag" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#5f6368"/></marker><marker id="sg" markerWidth="9" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 z" fill="#5f6368"/></marker><marker id="ab" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#1a73e8"/></marker><marker id="sb" markerWidth="9" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 z" fill="#1a73e8"/></marker><marker id="av" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#188038"/></marker><marker id="sv" markerWidth="9" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 z" fill="#188038"/></marker><marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c5221f"/></marker><marker id="sr" markerWidth="9" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 z" fill="#c5221f"/></marker></defs>
+<rect width="1600" height="1090" fill="#ffffff"/>
+<rect x="60" y="24" width="260" height="62" rx="10" fill="#fef7e0" stroke="#b06000" stroke-width="1.2"/>
+<text x="190.0" y="51.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Caja PWA</text>
+<text x="190.0" y="66.5" text-anchor="middle" font-size="11" fill="#3c4043">navegador de cada tienda</text>
+<rect x="640" y="24" width="330" height="62" rx="10" fill="#fef7e0" stroke="#b06000" stroke-width="1.2"/>
+<text x="805.0" y="51.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Operador</text>
+<text x="805.0" y="66.5" text-anchor="middle" font-size="11" fill="#3c4043">Cloud Shell · gcloud · Terraform</text>
+<rect x="1300" y="24" width="260" height="62" rx="10" fill="#fef7e0" stroke="#b06000" stroke-width="1.2"/>
+<text x="1430.0" y="51.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Looker Studio</text>
+<text x="1430.0" y="66.5" text-anchor="middle" font-size="11" fill="#3c4043">5 tableros de analítica</text>
+<polyline points="1000,36 1034,36" fill="none" stroke="#1a73e8" stroke-width="2"/>
+<text x="1042" y="40" font-size="10.5" fill="#3c4043">Traslado (commit en dos fases)</text>
+<polyline points="1000,50 1034,50" fill="none" stroke="#188038" stroke-width="2"/>
+<text x="1042" y="54" font-size="10.5" fill="#3c4043">Réplica y consulta de la red</text>
+<polyline points="1000,64 1034,64" fill="none" stroke="#5f6368" stroke-width="2"/>
+<text x="1042" y="68" font-size="10.5" fill="#3c4043">Sincronización y datos</text>
+<polyline points="1000,78 1034,78" fill="none" stroke="#5f6368" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1042" y="82" font-size="10.5" fill="#3c4043">Plano analítico</text>
+<rect x="20" y="110" width="1560" height="962" rx="14" fill="none" stroke="#1a73e8" stroke-width="1.5"/>
+<text x="34" y="130" font-size="12.5" font-weight="600" fill="#1a73e8"></text>
+<text x="1400" y="132" text-anchor="end" font-size="12.5" font-weight="600" fill="#1a73e8">Google Cloud · proyecto sima-dev · región us-central1</text>
+<rect x="70" y="140" width="250" height="56" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.2"/>
+<text x="195.0" y="164.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Identity-Aware Proxy</text>
+<text x="195.0" y="179.5" text-anchor="middle" font-size="11" fill="#3c4043">túneles TCP y SSH (35.235.240.0/20)</text>
+<rect x="50" y="220" width="520" height="550" rx="14" fill="#f8f9fa" stroke="#80868b" stroke-width="1.5"/>
+<text x="64" y="240" font-size="12.5" font-weight="600" fill="#3c4043">      VPC red-sima · subred 10.10.0.0/24 · sin IPs públicas</text>
+<rect x="80" y="270" width="290" height="88" rx="10" fill="#e6f4ea" stroke="#188038" stroke-width="1.2"/>
+<text x="225.0" y="295.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Compute Engine · sucursal-1 (Centro)</text>
+<text x="225.0" y="310.5" text-anchor="middle" font-size="11" fill="#3c4043">e2-small · COS · 10.10.0.11 · zona a</text>
+<text x="225.0" y="325.5" text-anchor="middle" font-size="11" fill="#3c4043">api-sucursal + PostgreSQL 16 local</text>
+<text x="225.0" y="340.5" text-anchor="middle" font-size="11" fill="#3c4043">cuenta sa-sucursal-1</text>
+<rect x="80" y="382" width="290" height="88" rx="10" fill="#e6f4ea" stroke="#188038" stroke-width="1.2"/>
+<text x="225.0" y="407.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Compute Engine · sucursal-2 (Zona 10)</text>
+<text x="225.0" y="422.5" text-anchor="middle" font-size="11" fill="#3c4043">e2-small · COS · 10.10.0.12 · zona b</text>
+<text x="225.0" y="437.5" text-anchor="middle" font-size="11" fill="#3c4043">api-sucursal + PostgreSQL 16 local</text>
+<text x="225.0" y="452.5" text-anchor="middle" font-size="11" fill="#3c4043">cuenta sa-sucursal-2</text>
+<rect x="80" y="494" width="290" height="88" rx="10" fill="#e6f4ea" stroke="#188038" stroke-width="1.2"/>
+<text x="225.0" y="519.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Compute Engine · sucursal-3 (Xela)</text>
+<text x="225.0" y="534.5" text-anchor="middle" font-size="11" fill="#3c4043">e2-small · COS · 10.10.0.13 · zona c</text>
+<text x="225.0" y="549.5" text-anchor="middle" font-size="11" fill="#3c4043">api-sucursal + PostgreSQL 16 local</text>
+<text x="225.0" y="564.5" text-anchor="middle" font-size="11" fill="#3c4043">cuenta sa-sucursal-3</text>
+<rect x="280" y="640" width="270" height="80" rx="10" fill="#e6f4ea" stroke="#188038" stroke-width="1.2"/>
+<text x="415.0" y="669.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">proxy-datastream</text>
+<text x="415.0" y="684.0" text-anchor="middle" font-size="11" fill="#3c4043">e2-micro · 10.10.0.250</text>
+<text x="415.0" y="699.0" text-anchor="middle" font-size="11" fill="#3c4043">reenvía :5432 a Cloud SQL</text>
+<rect x="80" y="640" width="180" height="80" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.2"/>
+<text x="170.0" y="669.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud Router + NAT</text>
+<text x="170.0" y="684.0" text-anchor="middle" font-size="11" fill="#3c4043">salida a internet</text>
+<text x="170.0" y="699.0" text-anchor="middle" font-size="11" fill="#3c4043">de las VMs</text>
+<rect x="640" y="240" width="320" height="84" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.2"/>
+<text x="800.0" y="271.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Pub/Sub</text>
+<text x="800.0" y="286.0" text-anchor="middle" font-size="11" fill="#3c4043">tema sima-sincronizacion → push con OIDC</text>
+<text x="800.0" y="301.0" text-anchor="middle" font-size="11" fill="#3c4043">15 entregas → tema de muertos</text>
+<rect x="640" y="420" width="320" height="104" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.2"/>
+<text x="800.0" y="453.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud Run · api-central</text>
+<text x="800.0" y="468.5" text-anchor="middle" font-size="11" fill="#3c4043">consolidación, catálogo maestro</text>
+<text x="800.0" y="483.5" text-anchor="middle" font-size="11" fill="#3c4043">coordinador del 2PC</text>
+<text x="800.0" y="498.5" text-anchor="middle" font-size="11" fill="#3c4043">privado (OIDC) · salida directa a la VPC</text>
+<rect x="640" y="640" width="320" height="90" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.2"/>
+<text x="800.0" y="674.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud SQL · sima-central</text>
+<text x="800.0" y="689.0" text-anchor="middle" font-size="11" fill="#3c4043">PostgreSQL 16 · db-g1-small · solo IP privada</text>
+<text x="800.0" y="704.0" text-anchor="middle" font-size="11" fill="#3c4043">bitácora del coordinador del 2PC</text>
+<rect x="1010" y="240" width="240" height="84" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.2"/>
+<text x="1130.0" y="271.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud Monitoring + Logging</text>
+<text x="1130.0" y="286.0" text-anchor="middle" font-size="11" fill="#3c4043">verificación de /salud</text>
+<text x="1130.0" y="301.0" text-anchor="middle" font-size="11" fill="#3c4043">2 métricas de logs · 5 alertas</text>
+<rect x="1010" y="437" width="240" height="70" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.2"/>
+<text x="1130.0" y="461.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud Scheduler</text>
+<text x="1130.0" y="476.0" text-anchor="middle" font-size="11" fill="#3c4043">recuperación del 2PC</text>
+<text x="1130.0" y="491.0" text-anchor="middle" font-size="11" fill="#3c4043">cada minuto (OIDC)</text>
+<rect x="1290" y="420" width="260" height="104" rx="10" fill="#fce8e6" stroke="#c5221f" stroke-width="1.2"/>
+<text x="1420.0" y="453.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">BigQuery</text>
+<text x="1420.0" y="468.5" text-anchor="middle" font-size="11" fill="#3c4043">sima_cdc (réplica cruda)</text>
+<text x="1420.0" y="483.5" text-anchor="middle" font-size="11" fill="#3c4043">MERGE programado cada hora</text>
+<text x="1420.0" y="498.5" text-anchor="middle" font-size="11" fill="#3c4043">sima_analitica: esquema estrella</text>
+<rect x="1290" y="640" width="260" height="90" rx="10" fill="#fce8e6" stroke="#c5221f" stroke-width="1.2"/>
+<text x="1420.0" y="674.0" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Datastream</text>
+<text x="1420.0" y="689.0" text-anchor="middle" font-size="11" fill="#3c4043">CDC de Cloud SQL</text>
+<text x="1420.0" y="704.0" text-anchor="middle" font-size="11" fill="#3c4043">conexión privada 10.30.0.0/29</text>
+<rect x="50" y="820" width="1500" height="232" rx="14" fill="none" stroke="#8430ce" stroke-width="1.5"/>
+<text x="64" y="840" font-size="12.5" font-weight="600" fill="#8430ce">Plataforma, seguridad y operación (todas las cargas las usan con su propia cuenta de servicio)</text>
+<rect x="78" y="870" width="272" height="100" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.2"/>
+<text x="214.0" y="901.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">IAM</text>
+<text x="214.0" y="916.5" text-anchor="middle" font-size="11" fill="#3c4043">10 cuentas de servicio</text>
+<text x="214.0" y="931.5" text-anchor="middle" font-size="11" fill="#3c4043">mínimo privilegio, sin llaves</text>
+<text x="214.0" y="946.5" text-anchor="middle" font-size="11" fill="#3c4043">una cuenta por sucursal</text>
+<rect x="374" y="870" width="272" height="100" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.2"/>
+<text x="510.0" y="901.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Secret Manager</text>
+<text x="510.0" y="916.5" text-anchor="middle" font-size="11" fill="#3c4043">9 secretos: BD del central y</text>
+<text x="510.0" y="931.5" text-anchor="middle" font-size="11" fill="#3c4043">claves de sesión y firma</text>
+<text x="510.0" y="946.5" text-anchor="middle" font-size="11" fill="#3c4043">por sucursal</text>
+<rect x="670" y="870" width="272" height="100" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.2"/>
+<text x="806.0" y="901.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud Build → Artifact Registry</text>
+<text x="806.0" y="916.5" text-anchor="middle" font-size="11" fill="#3c4043">imágenes sima, sima-migraciones</text>
+<text x="806.0" y="931.5" text-anchor="middle" font-size="11" fill="#3c4043">y copia de postgres:16-alpine</text>
+<text x="806.0" y="946.5" text-anchor="middle" font-size="11" fill="#3c4043">misma imagen en Run y en VMs</text>
+<rect x="966" y="870" width="272" height="100" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.2"/>
+<text x="1102.0" y="901.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Cloud Storage</text>
+<text x="1102.0" y="916.5" text-anchor="middle" font-size="11" fill="#3c4043">estado de Terraform</text>
+<text x="1102.0" y="931.5" text-anchor="middle" font-size="11" fill="#3c4043">versionado, acceso uniforme</text>
+<text x="1102.0" y="946.5" text-anchor="middle" font-size="11" fill="#3c4043">sin acceso público</text>
+<rect x="1262" y="870" width="272" height="100" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.2"/>
+<text x="1398.0" y="901.5" text-anchor="middle" font-size="13" font-weight="600" fill="#202124">Facturación · presupuesto</text>
+<text x="1398.0" y="916.5" text-anchor="middle" font-size="11" fill="#3c4043">USD 300 del crédito</text>
+<text x="1398.0" y="931.5" text-anchor="middle" font-size="11" fill="#3c4043">avisos al 25/50/80/100 %</text>
+<text x="1398.0" y="946.5" text-anchor="middle" font-size="11" fill="#3c4043">hasta el 2027-01-10</text>
+<text x="800" y="1000" text-anchor="middle" font-size="11" fill="#5f6368">Terraform (infra/terraform) administra 133 recursos de este diagrama; el estado vive en Cloud Storage.</text>
+<text x="800" y="1016" text-anchor="middle" font-size="11" fill="#5f6368">Looker Studio, la caja y el operador están fuera del proyecto.</text>
+<polyline points="190,86 190,140" fill="none" stroke="#5f6368" stroke-width="1.4" marker-end="url(#ag)"/>
+<rect x="196" y="118" width="115.72000000000001" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="200" y="128" text-anchor="start" font-size="10.5" fill="#3c4043">HTTPS por túnel IAP</text>
+<polyline points="190,196 190,270" fill="none" stroke="#5f6368" stroke-width="1.4" marker-end="url(#ag)"/>
+<rect x="196" y="202" width="86.32000000000001" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="200" y="212" text-anchor="start" font-size="10.5" fill="#3c4043">:3000 → /caja/</text>
+<polyline points="370,300 400,300" fill="none" stroke="#5f6368" stroke-width="1.2"/>
+<polyline points="370,412 400,412" fill="none" stroke="#5f6368" stroke-width="1.2"/>
+<polyline points="370,524 400,524" fill="none" stroke="#5f6368" stroke-width="1.2"/>
+<polyline points="400,524 400,286 640,286" fill="none" stroke="#5f6368" stroke-width="1.2" marker-end="url(#ag)"/>
+<rect x="470.96" y="256" width="98.08000000000001" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="520" y="266" text-anchor="middle" font-size="10.5" fill="#3c4043">outbox → publica</text>
+<rect x="438.62" y="269" width="162.76000000000002" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="520" y="279" text-anchor="middle" font-size="10.5" fill="#3c4043">(cada mensaje firmado HMAC)</text>
+<polyline points="800,324 800,420" fill="none" stroke="#5f6368" stroke-width="1.4" marker-end="url(#ag)"/>
+<rect x="712.74" y="358" width="174.52" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="800" y="368" text-anchor="middle" font-size="10.5" fill="#3c4043">push /sincronizacion/mensajes</text>
+<rect x="715.68" y="371" width="168.64000000000001" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="800" y="381" text-anchor="middle" font-size="10.5" fill="#3c4043">token OIDC de sa-pubsub-push</text>
+<polyline points="800,524 800,640" fill="none" stroke="#5f6368" stroke-width="1.4" marker-end="url(#ag)"/>
+<rect x="683.34" y="575" width="233.32000000000002" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="800" y="585" text-anchor="middle" font-size="10.5" fill="#3c4043">IP privada (acceso privado a servicios)</text>
+<polyline points="640,452 372,418" fill="none" stroke="#1a73e8" stroke-width="2.2" marker-end="url(#ab)"/>
+<rect x="414.8" y="402" width="180.4" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="505" y="412" text-anchor="middle" font-size="10.5" fill="#1a73e8">2PC: PREPARE · COMMIT PREPARED</text>
+<rect x="435.38" y="415" width="139.24" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="505" y="425" text-anchor="middle" font-size="10.5" fill="#1a73e8">IP interna + firma HMAC</text>
+<polyline points="372,515 640,500" fill="none" stroke="#188038" stroke-width="2.2" marker-end="url(#av)"/>
+<rect x="414.8" y="518" width="180.4" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="505" y="528" text-anchor="middle" font-size="10.5" fill="#188038">réplica del catálogo cada 10 s</text>
+<rect x="400.1" y="531" width="209.8" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="505" y="541" text-anchor="middle" font-size="10.5" fill="#188038">existencias de la red (OIDC + HMAC)</text>
+<polyline points="1010,472 960,472" fill="none" stroke="#5f6368" stroke-width="1.4" marker-end="url(#ag)"/>
+<polyline points="1010,300 960,440" fill="none" stroke="#5f6368" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ag)"/>
+<rect x="996" y="362" width="37.6" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="1000" y="372" text-anchor="start" font-size="10" fill="#3c4043">uptime</text>
+<polyline points="640,685 550,685" fill="none" stroke="#5f6368" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ag)"/>
+<rect x="566.54" y="658" width="56.92" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="595" y="668" text-anchor="middle" font-size="10.5" fill="#3c4043">WAL :5432</text>
+<polyline points="415,720 415,792 1420,792 1420,730" fill="none" stroke="#5f6368" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ag)"/>
+<rect x="768.68" y="778" width="462.64000000000004" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="1000" y="788" text-anchor="middle" font-size="10.5" fill="#3c4043">Datastream entra por el emparejamiento /29 y solo alcanza el :5432 de la proxy</text>
+<polyline points="1420,640 1420,524" fill="none" stroke="#5f6368" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ag)"/>
+<rect x="1426" y="578" width="103.96000000000001" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="1430" y="588" text-anchor="start" font-size="10.5" fill="#3c4043">merge cada 15 min</text>
+<polyline points="1420,420 1420,86" fill="none" stroke="#5f6368" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#ag)"/>
+<rect x="1426" y="260" width="92.2" height="13" fill="#ffffff" opacity="0.92"/>
+<text x="1430" y="270" text-anchor="start" font-size="10.5" fill="#3c4043">solo vistas v_*</text>
+</svg>

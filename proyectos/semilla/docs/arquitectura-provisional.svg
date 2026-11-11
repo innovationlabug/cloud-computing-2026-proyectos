@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="487" height="245" preserveAspectRatio="xMinYMin meet" viewBox="0 0 487 245" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="487" height="245"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-245)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="157" width="130" height="69" rx="7" ry="7" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,96%); fill-rule: evenodd;"/>
+			<text x="41.744" y="208" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,416) scale(1,-1)">Navegador</text>
+			<text x="23.208" y="192" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,384) scale(1,-1)">Token solo en memoria</text>
+			<text x="22.768" y="180" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,360) scale(1,-1)">Crear / listar / recuperar</text>
+			<rect x="178" y="157" width="130" height="69" rx="7" ry="7" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,96%); fill-rule: evenodd;"/>
+			<text x="209.4975" y="208" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,416) scale(1,-1)">Container Apps</text>
+			<text x="210.54399999999998" y="192" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,384) scale(1,-1)">Next.js: web y API</text>
+			<text x="202.536" y="180" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,360) scale(1,-1)">Identidad administrada</text>
+			<rect x="357" y="157" width="130" height="69" rx="7" ry="7" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,96%); fill-rule: evenodd;"/>
+			<text x="393.9965" y="208" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,416) scale(1,-1)">Blob Storage</text>
+			<text x="386.876" y="192" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,384) scale(1,-1)">JSON sintético Q50</text>
+			<text x="386.872" y="180" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,360) scale(1,-1)">Contenedor privado</text>
+			<path d="M 130,191 L 178,191 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="178 191, 172.5973 193.6098, 172.5973 188.3902" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<path d="M 308,191 L 357,191 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="357 191, 351.5973 193.6098, 351.5973 188.3902" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="143.304" y="205" style="font-family: Times-Roman; font-size: 7px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,410) scale(1,-1)">HTTPS</text>
+			<text x="324.6385" y="205" style="font-family: Times-Roman; font-size: 7px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,410) scale(1,-1)">JSON</text>
+			<rect x="0" y="28" width="130" height="72" rx="7" ry="7" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,96%); fill-rule: evenodd;"/>
+			<text x="24.743000000000002" y="82" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,164) scale(1,-1)">Container Registry</text>
+			<text x="22.436" y="66" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,132) scale(1,-1)">Dockerfile + ACR Tasks</text>
+			<text x="21.872" y="54" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,108) scale(1,-1)">Imagen sin credenciales</text>
+			<rect x="178" y="28" width="130" height="72" rx="7" ry="7" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,96%); fill-rule: evenodd;"/>
+			<text x="206.2485" y="82" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,164) scale(1,-1)">Identidad / RBAC</text>
+			<text x="207.204" y="66" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,132) scale(1,-1)">Datos al contenedor</text>
+			<text x="211.66" y="54" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,108) scale(1,-1)">AcrPull al registro</text>
+			<rect x="357" y="28" width="130" height="72" rx="7" ry="7" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(92%,95%,96%); fill-rule: evenodd;"/>
+			<text x="384.7355" y="82" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,164) scale(1,-1)">Secreto de la app</text>
+			<text x="393.996" y="66" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,132) scale(1,-1)">DEMO_TOKEN</text>
+			<text x="381.308" y="54" style="font-family: Helvetica; font-size: 8px;fill: rgb(32%,38%,44%); stroke:none;" transform="translate(0,108) scale(1,-1)">Key Vault queda futuro</text>
+			<path d="M 65,100 L 196,157 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="196 157, 190.0047 157.2375, 192.0872 152.4514" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<path d="M 243,100 L 243,157 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="243 157, 240.3902 151.5973, 245.6098 151.5973" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<path d="M 421,100 L 292,157 Z" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="292 157, 295.887 152.4293, 297.9965 157.2036" style="stroke: rgb(3%,49%,54%); stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,54%); fill-rule: evenodd;"/>
+			<text x="111.7125" y="9" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(7%,18%,27%); stroke:none;" transform="translate(0,18) scale(1,-1)">Preparado en código y scripts. Despliegue remoto pendiente.</text>
+		</g>
+	</g>
+</svg>
