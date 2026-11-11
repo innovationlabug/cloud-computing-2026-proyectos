@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyectos finales de Cloud Computing 2026</title>
+<meta name="description" content="Los proyectos finales del curso de Cloud Computing 2026 de la Universidad Galileo, desplegados en Google Cloud, AWS y Azure, con arquitectura, demo y documentación de cada equipo.">
+<meta property="og:title" content="Proyectos finales de Cloud Computing 2026">
+<meta property="og:description" content="Once aplicaciones web desplegadas en Google Cloud, AWS y Azure por estudiantes de la Universidad Galileo.">
+<meta property="og:image" content="proyectos/sima/img/diagrama-arquitectura.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#edf0f4;
+  --surface:#ffffff;
+  --ink:#18202e;
+  --muted:#596377;
+  --line:#d3d9e2;
+  --gcp:#1a66d9;
+  --aws:#b85c0a;
+  --azure:#0d7480;
+  --radius-lg:14px;
+  --radius-sm:6px;
+  --measure:62ch;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.6 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* Hero */
+.hero{padding:72px 0 40px}
+.hero h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-stretch:78%;font-size:clamp(2.8rem,9vw,7.5rem);line-height:.94;letter-spacing:-.02em;margin:0}
+.hero p{max-width:var(--measure);color:var(--muted);font-size:1.125rem;margin:20px 0 0}
+.hero p + p{margin-top:10px}
+.hero .course{color:var(--ink);font-weight:600}
+
+/* Wall of architectures */
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:48px}
+.wall a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:16/10;position:relative;text-decoration:none}
+.wall img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
+.wall a:hover img{transform:scale(1.06)}
+.wall span{position:absolute;inset:auto 0 0 0;padding:22px 12px 8px;font-size:.92rem;font-weight:600;background:linear-gradient(transparent,rgba(255,255,255,.96) 55%)}
+.wall a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--p);z-index:1}
+@media (prefers-reduced-motion:no-preference){
+  .wall a{opacity:0;transform:translateY(8px);animation:rise .5s ease forwards;animation-delay:calc(var(--i) * 45ms + 150ms)}
+  @keyframes rise{to{opacity:1;transform:none}}
+}
+
+/* Filters */
+.filters{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);margin-top:48px}
+.filters .wrap{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-block:12px}
+.filters p{margin:0 8px 0 0;color:var(--muted);font-size:.95rem}
+.chip{font:inherit;font-size:.95rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--p,var(--ink))}
+.chip small{color:var(--muted);font-weight:500}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip[aria-pressed="true"] small{color:#c9d0db}
+
+/* Projects */
+.projects{padding:28px 0 64px;display:grid;gap:28px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);overflow:hidden;scroll-margin-top:84px}
+.project[hidden]{display:none}
+.gcp{--p:var(--gcp)} .aws{--p:var(--aws)} .azure{--p:var(--azure)}
+.media{background:#f6f8fb;border-right:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.tabs{display:flex;gap:2px;padding:10px 10px 0}
+.tab{font:inherit;font-size:.9rem;font-weight:600;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:6px 12px 8px;cursor:pointer}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--p)}
+.panel{flex:1;display:flex;align-items:center;justify-content:center;padding:14px 14px 18px;min-height:260px}
+.panel[hidden]{display:none}
+.panel img,.panel video{border-radius:8px;width:100%;height:auto;max-height:440px;object-fit:contain;background:#fff}
+.panel video{background:#0f1520}
+.panel a.zoom{display:block;width:100%}
+.info{padding:30px 30px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.provider{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;color:var(--p)}
+.provider i{width:10px;height:10px;border-radius:3px;background:var(--p)}
+.info h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:85%;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.05;letter-spacing:-.01em;margin:0}
+.team{margin:0;color:var(--muted);font-size:.95rem}
+.summary{margin:0;max-width:var(--measure)}
+.services{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0;padding:0;list-style:none}
+.services li{font-size:.82rem;padding:3px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--p) 35%,transparent);background:color-mix(in srgb,var(--p) 7%,#fff);color:color-mix(in srgb,var(--p) 70%,var(--ink))}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;text-decoration:none;padding:9px 16px;border-radius:var(--radius-sm);border:1px solid var(--line);background:#fff}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--p);border-color:var(--p);color:#fff}
+.btn.primary:hover{filter:brightness(.92)}
+.btn svg{width:16px;height:16px}
+
+/* Brief */
+.brief{border-top:1px solid var(--line);padding:48px 0 24px}
+.brief h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-stretch:85%;font-size:1.8rem;margin:0 0 12px}
+.brief p{max-width:var(--measure);margin:0 0 12px;color:var(--muted)}
+footer{padding:28px 0 48px;color:var(--muted);font-size:.9rem}
+footer a{font-weight:600}
+
+@media (max-width:860px){
+  .wall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project{grid-template-columns:1fr}
+  .media{border-right:0;border-bottom:1px solid var(--line)}
+  .panel{min-height:0}
+  .info{padding:22px 20px 24px}
+  .hero{padding-top:48px}
+}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <h1>Cloud Computing 2026</h1>
+  <p>Este semestre, en el curso de <span class="course">Cloud Computing</span> de la Universidad Galileo, cada equipo tomó una aplicación web propia y la puso a funcionar en Google Cloud, AWS o Azure. Aquí están los once proyectos finales, con su arquitectura, el video de la demo y la documentación que escribió cada equipo.</p>
+  <p>Gracias a todos por compartir su trabajo.</p>
+  <nav class="wall" id="wall" aria-label="Proyectos"></nav>
+</header>
+
+<div class="filters">
+  <div class="wrap" role="group" aria-label="Filtrar por proveedor">
+    <p>Filtrar por nube</p>
+    <button class="chip" aria-pressed="true" data-filter="all">Todas <small id="c-all"></small></button>
+    <button class="chip gcp" aria-pressed="false" data-filter="gcp"><i></i>Google Cloud <small id="c-gcp"></small></button>
+    <button class="chip aws" aria-pressed="false" data-filter="aws"><i></i>AWS <small id="c-aws"></small></button>
+    <button class="chip azure" aria-pressed="false" data-filter="azure"><i></i>Azure <small id="c-azure"></small></button>
+  </div>
+</div>
+
+<main class="projects wrap" id="projects"></main>
+
+<section class="brief wrap" aria-labelledby="brief-title">
+  <h2 id="brief-title">Qué se pedía</h2>
+  <p>Le pedí a cada equipo desplegar un proyecto web propio en Google Cloud, AWS o Azure, integrando al menos siete servicios del proveedor entre cómputo, almacenamiento, base de datos, redes, seguridad, monitoreo, CI/CD e inteligencia artificial.</p>
+  <p>Firebase no contaba como servicio. El almacenamiento y la base de datos tenían que configurarse directamente en el proveedor, desde su consola o su CLI.</p>
+</section>
+
+<footer class="wrap">
+  <p>Curso de Cloud Computing 2026, Universidad Galileo (FISICC). Cada proyecto y su documentación son de su equipo. <a href="https://github.com/innovationlabug/cloud-computing-2026-proyectos">Ver el repositorio de la vitrina</a></p>
+</footer>
+
+<noscript><p class="wrap">Esta página necesita JavaScript para mostrar los proyectos. También puedes verlos en <a href="https://github.com/innovationlabug/cloud-computing-2026-proyectos">el repositorio</a>.</p></noscript>
+
+<script>
+const REPO = "https://github.com/innovationlabug/cloud-computing-2026-proyectos/tree/main/proyectos/";
+const PROVIDERS = {gcp:"Google Cloud", aws:"AWS", azure:"Azure"};
+const P = [
+  {slug:"sima", name:"SIMA", full:"Inventario distribuido para varias sucursales", p:"gcp",
+   team:["David Alejandro Ortega Reyes","Dilan Jareth Arreaga Tiu"],
+   summary:"Un sistema de inventario para una cadena con tres sucursales. Cada sucursal corre en su propia VM y sigue vendiendo aunque se caiga el internet. Una central en Cloud Run coordina los traslados con two-phase commit sobre Cloud SQL, Pub/Sub lleva la sincronización y Datastream copia los datos a BigQuery para la analítica. Toda la infraestructura está en Terraform.",
+   services:["Compute Engine","Cloud Run","Cloud SQL","Pub/Sub","Datastream","BigQuery","Cloud Scheduler","Secret Manager","Terraform"],
+   video:true, capture:true},
+  {slug:"finansync", name:"FinanSync", p:"gcp",
+   team:["Roberto Javier Molina López","Luis Gabriel Córdova Archila"],
+   summary:"Una aplicación de finanzas personales hecha en Next.js, con dominio propio. Tiene un chat financiero con Gemini, lee el texto de las facturas con Cloud Vision y envía un reporte mensual que programa Cloud Scheduler.",
+   services:["Cloud Run","Vertex AI","Cloud Vision","Cloud Storage","Cloud Scheduler","Cloud Build","IAM"],
+   app:"https://finansync.me", repo:"https://github.com/RobertoJavier1/FinanSync-v2", video:true},
+  {slug:"aquacontrol-360", name:"AquaControl 360", p:"gcp",
+   team:["Edgar Andrés Culajay Hernández","Allan Josué Gómez Pérez"],
+   summary:"Una plataforma para granjas de camarón y tilapia. Un ESP32 mide el oxígeno de cada piscina y manda las lecturas a una API en Cloud Run, que pasa por Pub/Sub, las guarda en Cloud SQL y genera alertas. Desde la web y las apps de Android e iOS se encienden los aireadores, y Gemini cuenta ganado en fotos.",
+   services:["Cloud Run","Cloud SQL","Pub/Sub","Cloud Storage","Vertex AI","Secret Manager","IAM"],
+   app:"https://aquacontrol-web-1000315935309.us-central1.run.app", video:true},
+  {slug:"guiame", name:"Guíame", p:"gcp",
+   team:["Molly Toledo Vega","María Teresa Rivera López"],
+   summary:"Una app de Android y un portal web que acompañan el autoexamen de mama. La API corre en Cloud Run detrás de un balanceador, y al terminar cada autoexamen Gemini redacta un reporte en español, sin dar diagnósticos.",
+   services:["Cloud Run","Cloud SQL","Cloud Storage","Vertex AI","Load Balancing","Secret Manager","IAM"],
+   repo:"https://github.com/mtvhua/Guiame", video:true, capture:true},
+  {slug:"leaf", name:"LEAF", p:"aws",
+   team:["Pablo Daniel Vásquez Aldana"],
+   summary:"Una aplicación para registrar las lecturas de los contadores de agua de un condominio y calcular el consumo de cada casa. Corre en EC2 detrás de un balanceador y CloudFront, con RDS y S3, roles de IAM con permisos mínimos y alarmas que avisan por correo.",
+   services:["EC2","RDS PostgreSQL","S3","CloudFront","Load Balancer","IAM","CloudWatch","SNS"],
+   app:"https://d1eik3xsy2bfk4.cloudfront.net", capture:true, repo:"https://github.com/Zylohw/Proyecto-Final-Cloud-Computing"},
+  {slug:"semilla", name:"Semilla", full:"Asistente de gestión para pequeños negocios", p:"azure",
+   team:["Lizardo Enmanuel González Méndez","Jessell Andrea Contreras Escobar"],
+   summary:"Un asistente para que pequeños emprendedores ordenen las cuentas de su negocio. Corre en Container Apps con PostgreSQL, guarda los comprobantes en Blob Storage y lee sus secretos de Key Vault con identidades administradas. Hace deploy con GitHub Actions, sin guardar secretos en el repositorio.",
+   services:["Container Apps","PostgreSQL","Blob Storage","Key Vault","Entra ID","Azure Monitor","GitHub Actions"],
+   repo:"https://github.com/lizardoenm12/semilla-cloud", video:true, capture:true},
+  {slug:"syncnopsis", name:"SyncNopsis", p:"aws",
+   team:["Fernando Josué Alegría Velásquez","Anyelo Arthur Sánchez Naranjo"],
+   summary:"Un _segundo cerebro_ donde guardas capturas y notas, y la IA las organiza y las conecta. Corre en EC2 detrás de CloudFront, busca por significado con pgvector en RDS, guarda las imágenes en S3 y hace deploy automático con CodeBuild.",
+   services:["EC2","ECR","RDS + pgvector","S3","CloudFront","Secrets Manager","CodeBuild","CloudWatch"],
+   app:"https://d11s6bjcprs8g7.cloudfront.net", video:true},
+  {slug:"nexoria", name:"Nexoria", p:"gcp",
+   team:["Jean Carlo Pacheco Pérez","Rodrigo Armando Nathanael Gálvez Mazariegos"],
+   summary:"Una plataforma para administrar condominios, con visitas por código QR, reservas de amenidades, estados de cuenta y paquetería. Gemini analiza las incidencias y AWS Rekognition lee las placas en la garita, sin uso de keys, gracias a la federación de identidad entre Google Cloud y AWS.",
+   services:["Cloud Run","Cloud Build","Vertex AI","AWS Rekognition","IAM","Cloud Monitoring"]},
+  {slug:"glacier-quest", name:"Glacier Quest", p:"gcp",
+   team:["Pablo David Urbina Alvarez","Angel David Camargo Hernández"],
+   summary:"Un juego multijugador con misiones, combates, duelos y chat. Corre en Cloud Run, hace deploy con Cloud Build y Artifact Registry, y Cloud Scheduler limpia cada cierto tiempo la presencia de los jugadores y los mensajes temporales.",
+   services:["Cloud Run","Cloud Storage","Secret Manager","Cloud Build","Cloud Scheduler","IAM"],
+   app:"https://glacierquest-demo-636305098699.us-central1.run.app/", repo:"https://github.com/angelprogt3985/Cloud-Computing-proyecto", video:true},
+  {slug:"smartflow", name:"SmartFlow AI", p:"gcp",
+   team:["Andrea Sofía Dávila Equité","Wilder Javier Cardoza de la Cruz"],
+   summary:"Describes un proceso de tu negocio con tus palabras y Gemini dibuja el diagrama de flujo, encuentra los cuellos de botella y arma un reporte. El frontend y el backend corren en Cloud Run, con Cloud SQL y Cloud Storage.",
+   services:["Cloud Run","Cloud SQL","Cloud Storage","Vertex AI","Cloud Build","Cloud Monitoring"],
+   app:"https://smartflow-frontend-1020540188448.us-central1.run.app", repo:"https://github.com/Sistemas-UG/Proyecto-IS", video:true},
+  {slug:"estudio-3d", name:"Estudio 3D", p:"aws",
+   team:["Geovanni Alejandro Ordoñez Alvarez","Alan Steven Martínez López"],
+   summary:"Una aplicación para un taller de impresión 3D. Cotiza la pieza a partir del archivo .stl, gestiona los pedidos y tiene una cámara en vivo para ver cómo se imprime tu pieza.",
+   services:["EC2","S3","CloudFront","Lambda"],
+   repo:"https://github.com/AlanMartinezzzz/estudio3d-backend"}
+];
+
+const ICON = {
+  open:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>',
+  code:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>'
+};
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const joinNames = a => a.length < 2 ? a[0] : a.slice(0,-1).join(", ") + " y " + a.at(-1);
+
+// Wall
+document.getElementById("wall").innerHTML = P.map((x,i) =>
+  `<a href="#${x.slug}" class="${x.p}" style="--i:${i}"><img src="proyectos/${x.slug}/img/${x.thumb || (x.capture ? "captura-app.png" : x.video ? "poster.jpg" : "diagrama-arquitectura.png")}" alt="" loading="lazy"><span>${esc(x.name)}</span></a>`).join("");
+
+// Projects
+document.getElementById("projects").innerHTML = P.map(x => {
+  const base = `proyectos/${x.slug}/img/`;
+  const tabs = [];
+  if (x.video) tabs.push(["demo","Demo",`<video controls preload="none" playsinline poster="${base}poster.jpg" src="proyectos/${x.slug}/video.mp4" aria-label="Video de demostración de ${esc(x.name)}"></video>`]);
+  if (x.capture) tabs.push(["captura","Captura",`<img src="${base}captura-app.png" alt="Captura de la aplicación ${esc(x.name)}" loading="lazy">`]);
+  tabs.push(["arq","Arquitectura",`<a class="zoom" href="${base}diagrama-arquitectura.png" target="_blank" rel="noopener" title="Abrir el diagrama completo"><img src="${base}diagrama-arquitectura.png" alt="Diagrama de arquitectura de ${esc(x.name)} en ${PROVIDERS[x.p]}" loading="lazy"></a>`]);
+  const tabBtns = tabs.map((t,i) => `<button class="tab" role="tab" id="${x.slug}-t-${t[0]}" aria-controls="${x.slug}-p-${t[0]}" aria-selected="${i===0}" tabindex="${i===0?0:-1}">${t[1]}</button>`).join("");
+  const panels = tabs.map((t,i) => `<div class="panel" role="tabpanel" id="${x.slug}-p-${t[0]}" aria-labelledby="${x.slug}-t-${t[0]}" ${i?"hidden":""}>${t[2]}</div>`).join("");
+  const actions = [
+    x.app ? `<a class="btn primary" href="${x.app}" target="_blank" rel="noopener">${ICON.open}Abrir la app</a>` : "",
+    `<a class="btn" href="${REPO}${x.slug}" target="_blank" rel="noopener">${ICON.doc}Leer la documentación</a>`,
+    x.repo ? `<a class="btn" href="${x.repo}" target="_blank" rel="noopener">${ICON.code}Ver el código</a>` : ""
+  ].join("");
+  return `<article class="project ${x.p}" id="${x.slug}" data-p="${x.p}" aria-labelledby="${x.slug}-name">
+    <div class="media"><div class="tabs" role="tablist" aria-label="Contenido de ${esc(x.name)}">${tabBtns}</div>${panels}</div>
+    <div class="info">
+      <span class="provider"><i></i>${PROVIDERS[x.p]}</span>
+      <h2 id="${x.slug}-name">${esc(x.name)}</h2>
+      ${x.full ? `<p class="team" style="color:var(--ink);font-weight:500">${esc(x.full)}</p>` : ""}
+      <p class="team">${esc(joinNames(x.team))}</p>
+      <p class="summary">${esc(x.summary).replace(/_(.+?)_/g,"<em>$1</em>")}</p>
+      <ul class="services" aria-label="Servicios principales">${x.services.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>
+      <div class="actions">${actions}</div>
+    </div>
+  </article>`;
+}).join("");
+
+// Tabs
+document.querySelectorAll('[role="tablist"]').forEach(list => {
+  const tabs = [...list.querySelectorAll('[role="tab"]')];
+  const select = t => {
+    tabs.forEach(o => {
+      const on = o === t;
+      o.setAttribute("aria-selected", on); o.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(o.getAttribute("aria-controls"));
+      panel.hidden = !on;
+      if (!on) panel.querySelectorAll("video").forEach(v => v.pause());
+    });
+  };
+  tabs.forEach((t,i) => {
+    t.addEventListener("click", () => select(t));
+    t.addEventListener("keydown", e => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; select(n); n.focus(); }
+    });
+  });
+});
+
+// Filters
+const count = k => P.filter(x => k === "all" || x.p === k).length;
+["all","gcp","aws","azure"].forEach(k => document.getElementById("c-"+k).textContent = count(k));
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  const f = b.dataset.filter;
+  document.querySelectorAll(".chip").forEach(o => o.setAttribute("aria-pressed", o === b));
+  document.querySelectorAll(".project").forEach(a => a.hidden = !(f === "all" || a.dataset.p === f));
+}));
+</script>
+</body>
+</html>
