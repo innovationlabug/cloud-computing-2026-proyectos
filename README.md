@@ -1,6 +1,6 @@
 # Cloud Computing 2026
 
-**[Ver la vitrina de proyectos](https://innovationlabug.github.io/cloud-computing-2026-proyectos/)**
+**[Ver la vitrina de proyectos](https://cloud-computing-2026.web.app)**
 
 Este semestre, en el curso de Cloud Computing de la Universidad Galileo, cada equipo tomó una aplicación web propia y la puso a funcionar en Google Cloud, AWS o Azure. Aquí están los once proyectos finales, con su arquitectura, el video de la demo y la documentación que escribió cada equipo. Gracias a todos por compartir su trabajo.
 

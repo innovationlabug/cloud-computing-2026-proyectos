@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "site": "cloud-computing-2026",
+    "public": ".",
+    "ignore": ["firebase.json", ".firebaserc", "**/.*", "**/*.md", "**/*.html.bak"],
+    "headers": [
+      {"source": "**/*.@(mp4|png|jpg|pdf)", "headers": [{"key": "Cache-Control", "value": "public, max-age=86400"}]}
+    ]
+  }
+}
