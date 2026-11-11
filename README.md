@@ -51,7 +51,7 @@ SIMA es un inventario para una cadena con tres sucursales: cada una corre en su 
 ### 2. [FinanSync](proyectos/finansync/README.md)
 **Grupo 2 · Google Cloud.** Roberto Javier Molina López y Luis Gabriel Córdova Archila.
 FinanSync es una aplicación de finanzas personales hecha en Next.js y desplegada en Cloud Run con dominio propio. Tiene un chat financiero con Gemini en Vertex AI y extrae el texto de las facturas con Cloud Vision. Los reportes mensuales salen programados con Cloud Scheduler.
-[Repositorio](https://github.com/RobertoJavier1/FinanSync-v2) · [Documentación](proyectos/finansync/README.md) · [Video](proyectos/finansync/video.mp4)
+[Repositorio](https://github.com/RobertoJavier1/FinanSync-v2) · [Documentación](proyectos/finansync/README.md) · [Video](proyectos/finansync/video.mp4) · [Video en YouTube](https://www.youtube.com/watch?v=NpCvoWSodEU)
 
 ### 3. [AquaControl 360](proyectos/aquacontrol-360/README.md)
 **Grupo 9, ShirmpProgrammers · Google Cloud.** Edgar Andrés Culajay Hernández y Allan Josué Gómez Pérez.
@@ -61,12 +61,12 @@ AquaControl 360 gestiona granjas de camarón y tilapia. Un ESP32 mide el oxígen
 ### 4. [Guíame](proyectos/guiame/README.md)
 **Grupo 4 · Google Cloud.** Molly Toledo Vega y María Teresa Rivera López.
 Guíame es un ecosistema de salud digital que acompaña el autoexamen de mama. La API corre en Cloud Run detrás de Cloud Load Balancing, con Cloud SQL, Cloud Storage y Secret Manager. Al terminar cada autoexamen, Gemini en Vertex AI redacta un reporte en español, sin dar diagnósticos.
-[Repositorio](https://github.com/mtvhua/Guiame) · [Documentación](proyectos/guiame/README.md) · [Video](proyectos/guiame/video.mp4)
+[Repositorio](https://github.com/mtvhua/Guiame) · [Documentación](proyectos/guiame/README.md) · [Video](proyectos/guiame/video.mp4) · [Video en YouTube](https://youtu.be/me_xdoWI5Rs)
 
 ### 5. [LEAF](proyectos/leaf/README.md)
 **Grupo 10 · AWS.** Pablo Daniel Vásquez Aldana.
 LEAF registra y consulta las lecturas de los contadores de agua de un condominio y calcula el consumo de cada vivienda. Corre en EC2 detrás de un Application Load Balancer y CloudFront, con RDS PostgreSQL y S3. Tiene roles de IAM con mínimo privilegio y alarmas de CloudWatch que avisan por SNS.
-[Repositorio](https://github.com/Zylohw/Proyecto-Final-Cloud-Computing) · [Documentación](proyectos/leaf/README.md)
+[Repositorio](https://github.com/Zylohw/Proyecto-Final-Cloud-Computing) · [Documentación](proyectos/leaf/README.md) · [Video en YouTube](https://www.youtube.com/watch?v=jv2t3hB3gt4) (privado)
 
 ### 6. [Semilla — asistente de gestión para pequeños negocios](proyectos/semilla/README.md)
 **Grupo 7 · Azure.** Lizardo Enmanuel González Méndez y Jessell Andrea Contreras Escobar.
